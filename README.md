@@ -20,7 +20,72 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+#### Basic
+
+Convert `gdb` file into a `gpx` file.
+
+	GPSBabel.convert {
+		input: {
+			format: 'gdb',
+			file: '/home/user/gps_data/tracks.gdb'
+		}
+	}
+
+This example will create a `gpx` file at `/home/user/gps_data/tracks.gpx`.
+
+#### Specify Output
+
+	GPSBabel.convert {
+		input: {
+			format: 'gdb',
+			file: '/home/user/gps_data/tracks.gdb'
+		},
+		output: {
+			format: 'gpx',
+			file: '/home/user/gps_data/converted_tracks.gpx'
+		}
+	}
+
+#### Convert and Extract
+
+Only extract specific GPS data from converted file using `options`. Defaults `waypoints`, `routes`, and `tracks` to `true`.
+
+	GPSBabel.convert {
+		input: {
+			format: 'gdb',
+			file: '/home/user/gps_data/tracks.gdb'
+		},
+		output: {
+			format: 'gpx',
+			file: '/home/user/gps_data/converted_tracks.gpx'
+		},
+		options: {
+			waypoints: false,
+			routes: false,
+			tracks: true
+		}
+	}
+
+#### GPX Version
+
+Specify which `gpx` version to convert to. Default: `1.1`
+
+	GPSBabel.convert {
+		input: {
+			format: 'gdb',
+			file: '/home/user/gps_data/tracks.gdb'
+		},
+		output: {
+			format: 'gpx',
+			gpxver: '1.0'
+			file: '/home/user/gps_data/converted_tracks.gpx'
+		},
+		options: {
+			waypoints: false,
+			routes: false,
+			tracks: true
+		}
+	}
 
 ## Contributing
 
