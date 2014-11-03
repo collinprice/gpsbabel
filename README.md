@@ -24,18 +24,18 @@ Or install it yourself as:
 
 Convert `gdb` file into a `gpx` file.
 
-	GPSBabel.convert {
+	GPSBabel.convert({
 		input: {
 			format: 'gdb',
 			file: '/home/user/gps_data/tracks.gdb'
 		}
-	}
+	})
 
 This example will create a `gpx` file at `/home/user/gps_data/tracks.gpx`.
 
 #### Specify Output
 
-	GPSBabel.convert {
+	GPSBabel.convert({
 		input: {
 			format: 'gdb',
 			file: '/home/user/gps_data/tracks.gdb'
@@ -44,13 +44,13 @@ This example will create a `gpx` file at `/home/user/gps_data/tracks.gpx`.
 			format: 'gpx',
 			file: '/home/user/gps_data/converted_tracks.gpx'
 		}
-	}
+	})
 
 #### Convert and Extract
 
 Only extract specific GPS data from converted file using `options`. Defaults `waypoints`, `routes`, and `tracks` to `true`.
 
-	GPSBabel.convert {
+	GPSBabel.convert({
 		input: {
 			format: 'gdb',
 			file: '/home/user/gps_data/tracks.gdb'
@@ -64,13 +64,13 @@ Only extract specific GPS data from converted file using `options`. Defaults `wa
 			routes: false,
 			tracks: true
 		}
-	}
+	})
 
 #### GPX Version
 
 Specify which `gpx` version to convert to. Default: `1.1`
 
-	GPSBabel.convert {
+	GPSBabel.convert({
 		input: {
 			format: 'gdb',
 			file: '/home/user/gps_data/tracks.gdb'
@@ -85,7 +85,7 @@ Specify which `gpx` version to convert to. Default: `1.1`
 			routes: false,
 			tracks: true
 		}
-	}
+	})
 
 ## Contributing
 
